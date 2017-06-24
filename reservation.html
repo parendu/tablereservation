@@ -31,7 +31,7 @@
 					</div>
 					<div class="panel-body">
 
-						<form role="form">
+					<form action="/api/new" method="POST">
 
 							<div class="form-group">
 								<label for="">Name</label>
@@ -103,8 +103,7 @@
 		// We use this instead of explicitly saying the URL is localhost:3001 because the url will change when we deploy.
 		var currentURL = window.location.origin;
 
-	    $.post(currentURL + "/api/tables", newReservation,
-	    function(data){
+	    $.post(currentURL + "/api/new", newReservation function(data){
 
 	    	// If a table is available... tell user they are booked.
 	    	if(data == true){
